@@ -24,7 +24,13 @@
           :disabled="loading"
         />
       </div>
-      <v-btn block color="primary" :loading="loading" type="submit">
+      <v-btn
+        block
+        color="primary"
+        :loading="loading"
+        type="submit"
+        @click="login"
+      >
         Login
       </v-btn>
     </v-form>
@@ -38,6 +44,12 @@ export default {
     password: '',
     loading: false,
   }),
+
+  methods: {
+    login() {
+      this.$router.push('./groupstable')
+    },
+  },
 }
 </script>
 
