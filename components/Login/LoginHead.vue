@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="text-h1 title">
+  <div class="title-wrapper d-flex align-center">
+    <h1 class="title text-h1">
       {{ title }}
     </h1>
   </div>
@@ -14,4 +14,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.title-wrapper {
+  height: 40vh;
+}
+</style>
