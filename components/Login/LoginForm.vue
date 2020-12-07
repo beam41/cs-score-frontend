@@ -1,41 +1,34 @@
 <template>
-  <v-form v-model="valid" @submit.prevent="login">
-    <v-card-title>Login</v-card-title>
-    <div class="mx-4">
-      <v-text-field
-        v-model="id"
-        type="text"
-        label="รหัส"
-        autocomplete="username"
-        required
-        outlined
-        dense
-        :disabled="loading"
-      />
-      <v-text-field
-        v-model="password"
-        type="password"
-        label="Password"
-        autocomplete="current-password"
-        required
-        outlined
-        dense
-        :disabled="loading"
-      />
-    </div>
-    <v-card-actions>
-      <v-btn
-        text
-        color="primary"
-        class="mr-4"
-        :loading="loading"
-        :disabled="!valid"
-        type="submit"
-      >
+  <div class="d-flex flex-column justify-center">
+    <v-form v-model="valid" @submit.prevent="login">
+      <h2 class="subtitle-1 mb-2 grey--text text--lighten-1">Login</h2>
+      <div>
+        <v-text-field
+          v-model="id"
+          type="text"
+          label="รหัสประจำตัว"
+          autocomplete="username"
+          required
+          outlined
+          dense
+          :disabled="loading"
+        />
+        <v-text-field
+          v-model="password"
+          type="password"
+          label="รหัสผ่าน"
+          autocomplete="current-password"
+          required
+          outlined
+          dense
+          :disabled="loading"
+        />
+      </div>
+      <v-btn block color="primary" :loading="loading" type="submit">
         Login
       </v-btn>
-    </v-card-actions>
-  </v-form>
+    </v-form>
+  </div>
 </template>
 
 <script>
@@ -43,6 +36,7 @@ export default {
   data: () => ({
     id: '',
     password: '',
+    loading: false,
   }),
 }
 </script>
