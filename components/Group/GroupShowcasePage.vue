@@ -1,16 +1,18 @@
 <template>
-  <div class="showcase-bg px-4">
-    <div class="d-flex justify-space-between">
-      <div class="top-left">
-        <AppHeader :title="group.projectName" big />
+  <div class="d-flex flex-column main">
+    <div class="showcase-bg px-4">
+      <div class="d-flex justify-space-between">
+        <div class="top-left">
+          <AppHeader :title="group.projectName" big />
+        </div>
+        <div class="top-right pl-4">
+          <GroupShowcaseQr />
+        </div>
       </div>
-      <div class="top-right pl-4">
-        <GroupShowcaseQr />
-      </div>
-    </div>
-    <GroupInfo :group="group" :dark="dark" />
+      <GroupInfo :group="group" :dark="dark" />
 
-    <GroupVoter :group="group" :dark="dark" height="calc(100vh - 420px)" />
+      <GroupVoter :group="group" :dark="dark" height="calc(100vh - 420px)" />
+    </div>
   </div>
 </template>
 

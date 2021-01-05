@@ -1,13 +1,7 @@
 <template>
-  <div :class="['d-flex flex-column main', isInGroup ? '' : 'px-4 pad-submit']">
-    <template v-if="!isInGroup">
-      <AppHeader :title="group.projectName" />
-      <GroupInfo :group="group" />
-      <GroupSubmitVote :group="group" />
-    </template>
-    <template v-else>
-      <LazyGroupShowcasePage :group="group" :dark="shouldDark" />
-    </template>
+  <div>
+    <LazyGroupVotePage v-if="!isInGroup" :group="group" />
+    <LazyGroupShowcasePage v-else :group="group" :dark="shouldDark" />
   </div>
 </template>
 
