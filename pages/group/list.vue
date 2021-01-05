@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex flex-column main px-4">
-    <TableHead />
-    <VoterName />
-    <Table />
+    <AppHeader title="CS Score" />
+    <GroupTableVoterInfo />
+    <GroupTable />
   </div>
 </template>
 

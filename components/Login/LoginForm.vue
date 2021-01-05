@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column justify-center">
-    <v-form v-model="valid" @submit.prevent="login">
+    <v-form @submit.prevent="login">
       <h2 class="subtitle-1 mb-2 grey--text text--lighten-1">Login</h2>
       <div>
         <v-text-field
@@ -47,7 +47,7 @@ export default {
 
   methods: {
     login() {
-      this.$router.push('./groupstable')
+      this.$router.push('./group/list')
     },
   },
 }
