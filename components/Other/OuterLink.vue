@@ -1,5 +1,10 @@
 <template>
-  <a :href="href" rel="noopener noreferrer"><slot /></a>
+  <a
+    :href="href"
+    rel="noopener noreferrer"
+    :class="dark ? 'blue--text text--lighten-3' : ''"
+    ><slot
+  /></a>
 </template>
 
 <script>
@@ -9,6 +14,7 @@ export default {
       type: String,
       required: true,
     },
+    dark: Boolean,
   },
 }
 </script>

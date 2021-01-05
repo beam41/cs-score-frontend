@@ -1,6 +1,9 @@
 <template>
   <v-card class="submit-vote pa-4 pb-8">
-    <v-btn block> ให้คะแนนกลุ่มที่ {{ group.id }} </v-btn>
+    <GroupTableVoterInfo />
+    <v-btn block color="var(--color)" class="button-vote">
+      ให้คะแนนกลุ่มที่ {{ group.id }}
+    </v-btn>
   </v-card>
 </template>
 
@@ -21,5 +24,9 @@ export default {
   left: 0;
   bottom: -16px;
   width: 100%;
+}
+
+.button-vote {
+  color: var(--text-color);
 }
 </style>

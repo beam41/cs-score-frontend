@@ -1,5 +1,5 @@
 <template>
-  <div class="detail-wrapper d-flex align-center justify-space-between pl-1">
+  <div class="detail-wrapper d-flex align-center justify-space-between">
     <p class="text-subtitle-1">{{ name }} {{ lastname }}</p>
     <p class="text-subtitle-1">โหวตได้อีก: {{ count }} กลุ่ม</p>
   </div>

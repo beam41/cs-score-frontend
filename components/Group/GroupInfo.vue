@@ -5,12 +5,13 @@
     ชื่อกลุ่ม: {{ group.name }}
     <br />
     Repo:
-    <OuterLink :href="`https://github.com/${group.githubName}`">{{
+    <OuterLink :href="`https://github.com/${group.githubName}`" :dark="dark">{{
       group.githubName
     }}</OuterLink>
     /
     <OuterLink
       :href="`https://github.com/${group.githubName}/${group.githubRepo}`"
+      :dark="dark"
       >{{ group.githubRepo }}</OuterLink
     >
   </p>
@@ -23,6 +24,7 @@ export default {
       type: Object,
       required: true,
     },
+    dark: Boolean,
   },
 }
 </script>

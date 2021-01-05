@@ -14,7 +14,9 @@
     "@nuxtjs/pwa": "^3.0.2",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "dayjs": "^1.10.1",
+    "nuxt": "^2.14.6",
+    "qrcode.vue": "v1.x"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

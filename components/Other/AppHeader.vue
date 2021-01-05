@@ -1,9 +1,11 @@
 <template>
   <div
-    class="title-wrapper d-flex align-center pt-8 pb-2"
+    :class="['title-wrapper d-flex align-center pb-2', big ? 'pt-16' : 'pt-8']"
     height="calc(100vh-20vh)"
   >
-    <h1 class="title text-h4">{{ title }}</h1>
+    <h1 :class="['app-title', big ? 'big text-h1' : 'not-big text-h4']">
+      {{ title }}
+    </h1>
   </div>
 </template>
 
@@ -14,6 +16,22 @@ export default {
       type: String,
       required: true,
     },
+    big: Boolean,
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.app-title {
+  &.big {
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &.not-big {
+    word-break: break-word;
+  }
+}
+</style>

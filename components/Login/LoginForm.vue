@@ -24,13 +24,7 @@
           :disabled="loading"
         />
       </div>
-      <v-btn
-        block
-        color="primary"
-        :loading="loading"
-        type="submit"
-        @click="login"
-      >
+      <v-btn block color="primary" :loading="loading" type="submit">
         Login
       </v-btn>
     </v-form>
@@ -47,7 +41,8 @@ export default {
 
   methods: {
     login() {
-      this.$router.push('./group/list')
+      this.$store.commit('user/login', { group: { id: 1 } })
+      this.$router.push('/group/list')
     },
   },
 }
