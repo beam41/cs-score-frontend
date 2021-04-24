@@ -43,7 +43,8 @@ export default {
         {
           id: 3,
           name: 'Minnie Mahapuy',
-          projectName: 'Minnie MahapuyMinnie MahapuyMinnie MahapuyMinnie Mahapuy',
+          projectName:
+            'Minnie MahapuyMinnie MahapuyMinnie MahapuyMinnie Mahapuy',
         },
         {
           id: 4,
