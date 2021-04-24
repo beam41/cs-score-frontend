@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column justify-center">
+  <div>
     <v-form @submit.prevent="login">
       <h2 class="subtitle-1 mb-2 grey--text text--lighten-1">Login</h2>
       <div>
@@ -41,7 +41,16 @@ export default {
 
   methods: {
     login() {
-      this.$store.commit('user/login', { group: { id: 1 } })
+      this.$store.commit('user/login', {
+        firstName: 'Pichai',
+        lastName: 'Namwan',
+        type: {
+          hasDashboardAccess: true,
+          pointPerSubmit: 1,
+        },
+        availableSubmit: 10,
+        group: { id: 1 },
+      })
       this.$router.push('/group/list')
     },
   },

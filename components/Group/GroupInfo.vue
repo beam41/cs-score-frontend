@@ -1,5 +1,5 @@
 <template>
-  <p class="text-subtitle-1 pl-1">
+  <p class="text-subtitle-1">
     <b>กลุ่มที่ {{ group.id }}</b>
     <br />
     <b>ชื่อกลุ่ม:</b> {{ group.name }}

@@ -1,8 +1,6 @@
 <template>
   <div class="main px-4">
-    <AppHeader title="CS Score" />
-    <GroupListVoterInfo />
-    <GroupList />
+    <AppHeader title="แก้ไขข้อมูลกลุ่ม" />
   </div>
 </template>
 
