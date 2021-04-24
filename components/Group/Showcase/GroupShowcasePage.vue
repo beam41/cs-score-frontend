@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex flex-column main">
-    <div class="showcase-bg px-4">
+  <div class="main">
+    <div class="showcase px-4 d-flex flex-column">
       <div class="d-flex justify-space-between">
         <div class="top-left">
           <AppHeader :title="group.projectName" big />
@@ -11,7 +11,7 @@
       </div>
       <GroupInfo :group="group" :dark="dark" />
 
-      <GroupVoter :group="group" height="calc(100vh - 420px)" />
+      <GroupVoter :group="group" />
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
   },
   mounted() {
     const html = document.getElementsByTagName('html')[0]
-    html.style.overflowY = 'auto'
+    html.style.overflowY = 'hidden'
   },
   destroyed() {
     const html = document.getElementsByTagName('html')[0]
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.showcase-bg {
+.showcase {
   background: var(--color);
   color: var(--text-color);
   min-height: 100vh;

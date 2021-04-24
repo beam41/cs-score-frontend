@@ -1,10 +1,10 @@
 <template>
   <p class="text-subtitle-1 pl-1">
-    กลุ่มที่ {{ group.id }}
+    <b>กลุ่มที่ {{ group.id }}</b>
     <br />
-    ชื่อกลุ่ม: {{ group.name }}
+    <b>ชื่อกลุ่ม:</b> {{ group.name }}
     <br />
-    Repo:
+    <b>Repository:</b>
     <OuterLink :href="`https://github.com/${group.githubName}`" :dark="dark">{{
       group.githubName
     }}</OuterLink>

@@ -1,6 +1,6 @@
 <template>
-  <div v-if="!loading">
-    <GroupVoterList :items="voteList" :height="height" />
+  <div v-if="!loading" class="flex-grow-1 pb-4 d-flex align-stretch">
+    <GroupVoterList :items="voteList" />
   </div>
 </template>
 
@@ -11,65 +11,14 @@ export default {
       type: Object,
       required: true,
     },
-    height: {
-      type: String,
-      default: undefined,
-    },
   },
   data: () => ({
     loading: false,
-    voteList: [
-      {
-        id: 1,
-        time: new Date().toISOString(),
-        by: 'หมีหอย',
-      },
-      {
-        id: 12,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 13,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 178,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 1454,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 154545,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 11542,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 145,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 14587,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-      {
-        id: 1778,
-        time: new Date().toISOString(),
-        by: 'ไม่ใช่หมีหอย',
-      },
-    ],
+    voteList: new Array(10).fill(0).map((v, i) => ({
+      id: i,
+      time: new Date().toISOString(),
+      by: 'หมีหอย',
+    })),
   }),
 }
 </script>

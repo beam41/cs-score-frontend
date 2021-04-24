@@ -1,7 +1,8 @@
 <template>
-  <v-card >
-    <v-card-title> Last 10 Vote </v-card-title>
-    <v-simple-table :height="height" fixed-header>
+  <v-card width="100%">
+    <v-card-title> Lastest Vote </v-card-title>
+
+    <v-simple-table fixed-header>
       <template v-slot:default>
         <thead>
           <tr>
@@ -27,10 +28,6 @@ export default {
     items: {
       type: Array,
       required: true,
-    },
-    height: {
-      type: String,
-      default: undefined,
     },
   },
   methods: {

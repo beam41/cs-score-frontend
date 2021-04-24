@@ -33,22 +33,22 @@ export default {
         {
           id: 1,
           name: 'Pikachu Lnwza',
-          projectName: '1',
+          projectName: 'Pikachu Lnwza',
         },
         {
           id: 2,
           name: 'Cs LhorThae',
-          projectName: '1',
+          projectName: 'Cs LhorThae',
         },
         {
           id: 3,
           name: 'Minnie Mahapuy',
-          projectName: '1',
+          projectName: 'Minnie MahapuyMinnie MahapuyMinnie MahapuyMinnie Mahapuy',
         },
         {
           id: 4,
           name: 'Gasha inmylife',
-          projectName: '1',
+          projectName: 'Gasha inmylife',
         },
         {
           id: 5,

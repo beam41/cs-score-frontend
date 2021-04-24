@@ -1,9 +1,10 @@
 <template>
   <v-card class="submit-vote pa-4 pb-8">
     <GroupTableVoterInfo />
-    <v-btn block color="var(--color)" class="button-vote">
+    <v-btn block color="var(--color)" class="button-vote mb-4" large>
       ให้คะแนนกลุ่มที่ {{ group.id }}
     </v-btn>
+    <v-btn block depressed @click="back()"> กลับ </v-btn>
   </v-card>
 </template>
 
@@ -13,6 +14,11 @@ export default {
     group: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    back() {
+      this.$router.go(-1)
     },
   },
 }
