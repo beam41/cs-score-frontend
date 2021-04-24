@@ -11,7 +11,7 @@
       </div>
       <GroupInfo :group="group" :dark="dark" />
 
-      <GroupVoter :group="group" :dark="dark" height="calc(100vh - 420px)" />
+      <GroupVoter :group="group" height="calc(100vh - 420px)" />
     </div>
   </div>
 </template>

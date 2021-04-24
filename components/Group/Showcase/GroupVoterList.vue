@@ -1,7 +1,7 @@
 <template>
-  <v-card :dark="dark">
+  <v-card >
     <v-card-title> Last 10 Vote </v-card-title>
-    <v-simple-table :dark="dark" :height="height" fixed-header>
+    <v-simple-table :height="height" fixed-header>
       <template v-slot:default>
         <thead>
           <tr>
@@ -28,7 +28,6 @@ export default {
       type: Array,
       required: true,
     },
-    dark: Boolean,
     height: {
       type: String,
       default: undefined,
