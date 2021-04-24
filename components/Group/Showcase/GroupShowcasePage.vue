@@ -40,7 +40,7 @@ export default {
 .showcase {
   background: var(--color);
   color: var(--text-color);
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .top-left {

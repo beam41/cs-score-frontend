@@ -1,7 +1,6 @@
 <template>
-  <v-card width="100%">
-    <v-card-title> Lastest Vote </v-card-title>
-
+  <v-card class="vote-card">
+    <v-card-title> Latest Vote </v-card-title>
     <v-simple-table fixed-header>
       <template v-slot:default>
         <thead>
@@ -35,3 +34,10 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.vote-card {
+  overflow: hidden;
+  height: 100%;
+}
+</style>
