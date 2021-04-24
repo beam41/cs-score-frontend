@@ -7,7 +7,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { determineColor } from '@/util/determine-color'
+import { determineColor } from '@/util/color'
 export default {
   data: (vm) => ({
     group: {
@@ -29,7 +29,7 @@ export default {
     },
   },
   mounted() {
-    this.colorHandle({ r: 0, g: 241, b: 181, a: 1 })
+    this.colorHandle({ r: 0, g: 0, b: 0, a: 0.1 })
   },
   methods: {
     colorHandle(color) {

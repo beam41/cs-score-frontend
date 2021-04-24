@@ -40,7 +40,21 @@
       dense
     >
     </v-text-field>
-    <v-btn block color="primary" :loading="loading" type="submit" class="mb-2">
+    <div class="d-flex align-center justify-center">
+      <v-card class="mt-4 mb-7">
+        <v-card-subtitle
+          >เลือกสีกลุ่ม (สำหรับหน้าแสดงผล, ปุ่มโหวต)</v-card-subtitle
+        >
+        <v-color-picker v-model="group.picker" dot-size="25" mode="hexa" />
+      </v-card>
+    </div>
+    <v-btn
+      block
+      color="var(--color)"
+      :loading="loading"
+      type="submit"
+      class="mb-2 submit-btn"
+    >
       บันทึก
     </v-btn>
     <v-btn block depressed @click="back()"> กลับ </v-btn>
@@ -63,6 +77,7 @@
 </template>
 
 <script>
+import { hexa2rgba, determineColor } from '@/util/color'
 const GITHUB_REGEX = / *[a-zA-Z_.0-9-]+ *\/ *[a-zA-Z_.0-9-]+ */
 
 export default {
@@ -72,6 +87,7 @@ export default {
       name: '',
       pName: '',
       repo: '',
+      picker: '',
     },
     saveDialog: false,
   }),
@@ -86,6 +102,13 @@ export default {
       }
     },
   },
+  watch: {
+    'group.picker'(to) {
+      const toRgba = hexa2rgba(to)
+      console.log(to, toRgba)
+      this.colorHandle(toRgba)
+    },
+  },
   methods: {
     back() {
       this.$router.push('/group/list')
@@ -93,8 +116,23 @@ export default {
     submit() {
       console.log('lol')
     },
+    colorHandle(color) {
+      const shouldDark = !determineColor(color)
+      document.documentElement.style.setProperty(
+        '--color',
+        `rgba(${color.r},${color.g},${color.b},${color.a})`
+      )
+      document.documentElement.style.setProperty(
+        '--text-color',
+        shouldDark ? 'white' : `rgba(0,0,0,0.85)`
+      )
+    },
   },
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.submit-btn {
+  color: var(--text-color);
+}
+</style>
