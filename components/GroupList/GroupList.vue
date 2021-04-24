@@ -13,6 +13,7 @@
           <tr
             v-for="item in groups"
             :key="item.name"
+            class="group-list-item"
             @click="clickGroup(item.id)"
           >
             <td>{{ item.id }}</td>
@@ -92,4 +93,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.group-list-item {
+  cursor: pointer;
+}
+</style>
