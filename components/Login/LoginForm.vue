@@ -1,34 +1,30 @@
 <template>
-  <div>
-    <v-form @submit.prevent="login">
-      <h2 class="subtitle-1 mb-2 grey--text text--lighten-1">Login</h2>
-      <div>
-        <v-text-field
-          v-model="id"
-          type="text"
-          label="รหัสประจำตัว"
-          autocomplete="username"
-          required
-          outlined
-          dense
-          :disabled="loading"
-        />
-        <v-text-field
-          v-model="password"
-          type="password"
-          label="รหัสผ่าน"
-          autocomplete="current-password"
-          required
-          outlined
-          dense
-          :disabled="loading"
-        />
-      </div>
-      <v-btn block color="primary" :loading="loading" type="submit">
-        Login
-      </v-btn>
-    </v-form>
-  </div>
+  <v-form @submit.prevent="login">
+    <h2 class="subtitle-2 mb-2 grey--text text--lighten-1">Login</h2>
+    <v-text-field
+      v-model="id"
+      type="text"
+      label="รหัสประจำตัว"
+      autocomplete="username"
+      required
+      outlined
+      dense
+      :disabled="loading"
+    />
+    <v-text-field
+      v-model="password"
+      type="password"
+      label="รหัสผ่าน"
+      autocomplete="current-password"
+      required
+      outlined
+      dense
+      :disabled="loading"
+    />
+    <v-btn block color="primary" :loading="loading" type="submit">
+      Login
+    </v-btn>
+  </v-form>
 </template>
 
 <script>

@@ -1,10 +1,12 @@
 <template>
-  <v-card class="submit-vote pa-4 pb-8">
-    <GroupTableVoterInfo />
-    <v-btn block color="var(--color)" class="button-vote mb-4" large>
-      ให้คะแนนกลุ่มที่ {{ group.id }}
-    </v-btn>
-    <v-btn block depressed @click="back()"> กลับ </v-btn>
+  <v-card class="submit-vote">
+    <div class="inner-cover pa-4 pb-8">
+      <GroupListVoterInfo no-btn />
+      <v-btn block color="var(--color)" class="button-vote mb-4" large>
+        ให้คะแนนกลุ่มที่ {{ group.id }}
+      </v-btn>
+      <v-btn block depressed @click="back()"> กลับ </v-btn>
+    </div>
   </v-card>
 </template>
 
@@ -30,6 +32,11 @@ export default {
   left: 0;
   bottom: -16px;
   width: 100%;
+}
+
+.inner-cover {
+  margin: auto;
+  max-width: 700px;
 }
 
 .button-vote {

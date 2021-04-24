@@ -6,13 +6,16 @@
         โหวตได้อีก: {{ user.availableSubmit }} กลุ่ม
       </p>
     </div>
-    <GroupListVoterAction />
+    <GroupListVoterAction v-if="!noBtn" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 export default {
+  props: {
+    noBtn: Boolean,
+  },
   computed: {
     ...mapState({
       user: (state) => state.user.data,
