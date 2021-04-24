@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!loading" class="flex-grow-1 pb-4 d-flex align-stretch">
+  <div v-if="!loading" class="voter flex-grow-1 pb-4">
     <GroupVoterList :items="voteList" />
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
   },
   data: () => ({
     loading: false,
-    voteList: new Array(10).fill(0).map((v, i) => ({
+    voteList: new Array(15).fill(0).map((v, i) => ({
       id: i,
       time: new Date().toISOString(),
       by: 'หมีหอย',
@@ -23,4 +23,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.voter {
+  overflow: hidden;
+}
+</style>
