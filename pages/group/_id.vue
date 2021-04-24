@@ -20,9 +20,6 @@ export default {
     },
     shouldDark: false,
   }),
-  mounted() {
-    this.colorHandle({ r: 0, g: 241, b: 181, a: 1 })
-  },
   computed: {
     ...mapState({
       user: (state) => state.user.data,
@@ -30,6 +27,9 @@ export default {
     isInGroup() {
       return this.group.id === this.user?.group?.id
     },
+  },
+  mounted() {
+    this.colorHandle({ r: 0, g: 241, b: 181, a: 1 })
   },
   methods: {
     colorHandle(color) {

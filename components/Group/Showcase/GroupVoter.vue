@@ -1,6 +1,6 @@
 <template>
   <div v-if="!loading">
-    <GroupVoterList :items="voteList" :dark="dark" :height="height" />
+    <GroupVoterList :items="voteList" :height="height" />
   </div>
 </template>
 
@@ -11,7 +11,6 @@ export default {
       type: Object,
       required: true,
     },
-    dark: Boolean,
     height: {
       type: String,
       default: undefined,
