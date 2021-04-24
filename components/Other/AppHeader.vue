@@ -1,8 +1,5 @@
 <template>
-  <div
-    :class="['title-wrapper d-flex align-center pb-2', big ? 'pt-16' : 'pt-8']"
-    height="calc(100vh-20vh)"
-  >
+  <div :class="['title-wrapper pb-2', big ? 'pt-16' : 'pt-8']">
     <h1 :class="['app-title', big ? 'big text-h1' : 'not-big text-h4']">
       {{ title }}
     </h1>

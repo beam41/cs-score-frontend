@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column main px-4">
+  <div class="main px-4">
     <LoginHeader />
     <LoginForm />
   </div>
