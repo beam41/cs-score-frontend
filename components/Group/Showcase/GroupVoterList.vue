@@ -1,7 +1,7 @@
 <template>
   <v-card class="vote-card">
     <v-card-title> Latest Vote </v-card-title>
-    <v-simple-table fixed-header>
+    <v-simple-table>
       <template v-slot:default>
         <thead>
           <tr>
