@@ -14,6 +14,7 @@
       block
       color="secondary"
       class="mt-2"
+      to="/dashboard"
     >
       Dashboard
     </v-btn>

@@ -38,6 +38,7 @@ export default {
   methods: {
     login() {
       this.$store.commit('user/login', {
+        id: 'A600510234',
         firstName: 'Pichai',
         lastName: 'Namwan',
         type: {
