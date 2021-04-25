@@ -23,14 +23,6 @@ export default {
     },
     dark: Boolean,
   },
-  mounted() {
-    const html = document.getElementsByTagName('html')[0]
-    html.style.overflowY = 'hidden'
-  },
-  destroyed() {
-    const html = document.getElementsByTagName('html')[0]
-    html.style.overflowY = null
-  },
 }
 </script>
 

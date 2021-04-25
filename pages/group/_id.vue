@@ -44,6 +44,11 @@ export default {
       )
     },
   },
+  head: (vm) => ({
+    htmlAttrs: {
+      class: vm.isInGroup ? 'hide-scroll' : '',
+    },
+  }),
 }
 </script>
 
