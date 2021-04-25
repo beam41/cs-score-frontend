@@ -1,5 +1,5 @@
 <template>
-  <v-card>log</v-card>
+  <v-card class="db-card">log</v-card>
 </template>
 
 <script>
