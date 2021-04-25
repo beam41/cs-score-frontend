@@ -1,5 +1,5 @@
 <template>
-  <v-card>top</v-card>
+  <v-card class="db-card">top</v-card>
 </template>
 
 <script>
