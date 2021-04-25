@@ -21,7 +21,7 @@
               :style="{ '--top-group-list-color': groupColor(group.color) }"
             >
               <v-card-subtitle class="top-g-name">
-                กลุ่มที่ {{ group.id }}
+                group <b>{{ group.id }}</b>
               </v-card-subtitle>
               <v-card-text
                 class="flex-grow-1 group-card-text d-flex flex-column"
