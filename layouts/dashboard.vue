@@ -1,27 +1,20 @@
 <template>
   <v-app light>
-    <v-navigation-drawer
-      :width="300"
-      dark
-      expand-on-hover
-      permanent
-      app
-      :mini-variant.sync="collapsing"
-    >
+    <v-navigation-drawer :width="300" light fixed app mobile-breakpoint="1000">
       <v-list>
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title class="title overflow-fix">
-              {{ collapsing ? initialName : fullName }}
+              {{ fullName }}
             </v-list-item-title>
             <v-list-item-subtitle class="caption overflow-fix">
-              {{ collapsing ? shortId : user.id }}
+              {{ user.id }}
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
       <v-divider></v-divider>
-      <v-list nav dense dark>
+      <v-list nav dense light>
         <template v-for="(item, i) in items">
           <template>
             <v-list-item :key="i" :to="item.to" router exact>
@@ -46,7 +39,6 @@
 import { mapState } from 'vuex'
 export default {
   data: () => ({
-    collapsing: true,
     items: [
       {
         icon: 'mdi-home-variant',
@@ -59,18 +51,8 @@ export default {
     ...mapState({
       user: (state) => state.user.data,
     }),
-    initialName() {
-      return this.user.firstName[0]
-    },
     fullName() {
       return `${this.user.firstName} ${this.user.lastName}`
-    },
-    shortId() {
-      const alpha = isNaN(+this.user.id[0])
-      const reg = new RegExp(`.{${alpha ? 2 : 3}}$`)
-      return alpha
-        ? this.user.id[0] + this.user.id.match(reg)[0]
-        : this.user.id.match(reg)[0]
     },
   },
 }

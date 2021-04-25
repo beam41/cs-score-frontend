@@ -10,7 +10,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in members" :key="item.id">
+          <tr v-for="item in sortedMembers" :key="item.id">
             <td>{{ item.id }}</td>
             <td>{{ item.name }} {{ item.lastname }}</td>
           </tr>
@@ -44,8 +44,13 @@ export default {
         id: '600510500',
         name: 'หมีหอย',
       },
-    ].sort((a, b) => a.id.localeCompare(b.id)),
+    ],
   }),
+  computed: {
+    sortedMembers() {
+      return [...this.members].sort((a, b) => a.id.localeCompare(b.id))
+    },
+  },
 }
 </script>
 
