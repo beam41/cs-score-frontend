@@ -12,7 +12,7 @@
         <tbody>
           <tr
             v-for="item in groups"
-            :key="item.name"
+            :key="item.id"
             class="group-list-item"
             @click="clickGroup(item.id)"
           >

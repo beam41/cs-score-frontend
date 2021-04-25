@@ -6,11 +6,12 @@
     >
       <div class="text-h4 text--primary mb-4">{{ currentTime }}</div>
       <v-btn
-        :color="`${voting ? 'error' : 'success'} ${voting ? '' : 'darken-1'}`"
+        :color="`${voting ? 'red' : 'green'} darken-1`"
         large
+        dark
         @click="voting ? stop() : start()"
       >
-        {{ voting ? 'หยุดโหวต' : 'เริ่มโหวต' }}
+        {{ voting ? 'Stop voting' : 'Start voting' }}
       </v-btn>
     </v-card-text>
   </v-card>
